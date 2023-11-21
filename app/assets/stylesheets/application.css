@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap');
+
+:root {
+  --main--blue: #3778c2;
+  --main--green: #5fb523;
+  --main-gray: #434b54;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.home--main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.home--link--container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home--link--container a {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  display: inline-block;
+  padding: 1rem;
+  background-color: #3778c2;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #fff;
+}
