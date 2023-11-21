@@ -14,7 +14,8 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,500;1,200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap'); */
 
 :root {
   --main--blue: #3778c2;
@@ -46,6 +47,10 @@ ul {
   min-height: 100vh;
   background-color: whitesmoke;
   padding: 20px;
+}
+
+.home--main h1 {
+  font-style: italic;
 }
 
 .home--link--container {
@@ -110,6 +115,11 @@ a {
   color: #fff;
 }
 
+.form--header h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
 .form--header input[type="submit"] {
   background-color: transparent;
   border: none;
@@ -155,7 +165,7 @@ form input[type="number"] {
 .catergories--list--container {
   width: 95%;
   margin: 20px auto;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .categories--list {
@@ -188,20 +198,33 @@ form input[type="number"] {
 }
 
 .categories--btn--container {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: flex-end;
+  background-color: var(--main--green);
 }
 
 .add--btn {
-  background-color: var(--main--blue);
-  border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 1rem;
   color: #fff;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #fff;
+  text-transform: uppercase;
 }
 
+.form--add--btn {
+  background-color: var(--main--green);
+}
+
+.sub--form--container {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .categories--container .form--header {
   margin: 0;
 }

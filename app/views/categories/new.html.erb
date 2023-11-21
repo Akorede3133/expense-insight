@@ -4,19 +4,23 @@
       <i class="fa-solid fa-arrow-left"></i>
     <% end %>
     <h2>Create a category</h2>
-    <div class="actions">
-      <%= f.submit "Create Category" %>
-    </div>
   </article>
   <% @category.errors.each do |error| %>
     <p><%= error.full_message %></p>
   <% end %>
 
-  <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name' %>
-  </div>
-  <div class="field">
-    <%= f.label :icon, 'Choose an icon' %><br>
-    <%= f.file_field :icon, autofocus: true, autocomplete: "icon" %>
-  </div>
+  <article class="sub--form--container">
+    <section>
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name' %>
+      </div>
+      <div class="field">
+        <%= f.label :icon, 'Choose an icon' %><br>
+        <%= f.file_field :icon, autofocus: true, autocomplete: "icon" %>
+      </div>
+    </section>
+    <div class="actions categories--btn--container">
+      <%= f.submit "Create Category", class: "add--btn form--add--btn" %>
+    </div>
+  </article>
 <% end %>
