@@ -61,6 +61,22 @@ a {
   text-decoration: none;
 }
 
+.form--container a {
+  text-align: center;
+  color: var(--main-gray);
+}
+
+.form--header a {
+  color: #fff;
+}
+
+.categories--item--info a {
+  font-size: 1.3rem;
+  color: var(--main-gray);
+  font-weight: 200;
+  padding-top: 0.5rem;
+}
+
 .home--link--container a {
   text-align: center;
   width: 90%;
@@ -71,4 +87,61 @@ a {
   text-decoration: none;
   border-radius: 0.5rem;
   color: #fff;
+}
+
+.home--link--container a:last-child {
+  background-color: whitesmoke;
+  color: var(--main-gray);
+}
+
+.form--header {
+  background-color: var(--main--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.form--header .fa-solid {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.form--header input[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #fff;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+form input[type="email"],
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  padding: 1rem;
+  border-top: 1px solid rgb(179, 177, 177);
+  border-bottom: 1px solid rgb(179, 177, 177);
+}
+
+form input[type="password"],
+form input[type="email"],
+form input[type="number"] {
+  border-top: none;
+}
+
+.form--container {
+  min-height: 100vh;
+  background-color: whitesmoke;
 }
