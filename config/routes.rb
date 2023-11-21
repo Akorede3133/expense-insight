@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'categories/new'
   get 'expenses/new'
   root 'home#index'
   devise_for :users, path: '', path_names: {
