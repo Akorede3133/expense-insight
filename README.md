@@ -53,9 +53,7 @@ Expense Insight is a web application built with Ruby on Rails that helps users m
 
 - [Visit the live project](https://expense-insight.onrender.com/)
 
-## 🚀 Description Video<a name="video-demo"></a>
 
-- [Link to the description video](https://www.loom.com/share/4fd09c915b7a49b784025cc5a6b34950)
 
 
 
