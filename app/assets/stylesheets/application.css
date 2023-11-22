@@ -14,8 +14,8 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,500;1,200&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap');
 
 :root {
   --main--blue: #3778c2;
@@ -50,7 +50,8 @@ ul {
 }
 
 .home--main h1 {
-  font-style: italic;
+  font-family: 'Dancing Script', sans-serif;
+  font-weight: 900;
 }
 
 .home--link--container {
@@ -225,6 +226,7 @@ form input[type="number"] {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .categories--container .form--header {
   margin: 0;
 }
