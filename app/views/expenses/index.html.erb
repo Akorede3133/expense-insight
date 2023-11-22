@@ -1,0 +1,34 @@
+<section class="categories--container">
+  <article class='form--header'>
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <h2>Transactions</h2>
+    <div></div>
+  </article>
+   <p class="categories--total--amount">
+    <span>Total Amount:</span> 
+    <span>$<%= format_amount(@category.expenses.sum(:amount)) %></span>
+   <p>
+  <article class="catergories--list--container">
+    <ul class="categories--list">
+      <% @expenses.each do |expense| %>
+          <li class="categories--item">
+            <div class="categories--item--info">
+              <% if @category.icon.attached? %>
+              <%= image_tag @category.icon %>
+              <% else %>
+                <%= image_tag "https://media.designrush.com/inspiration_images/134933/conversions/_1511456189_555_McDonald's-preview.jpg" %>
+              <% end %>
+              <p><%= expense.name %></p>
+            </div>
+            <p class="categories--item--price">$<%= format_amount(expense.amount) %></p>
+        </li>
+      <% end %>
+    </ul>
+  </article>
+
+  <article class="categories--btn--container">
+    <%= link_to 'Add a New Transaction', new_category_expense_path(@category), class: "add--btn" %>
+  </article>
+</section>

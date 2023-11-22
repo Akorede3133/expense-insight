@@ -1,0 +1,28 @@
+<section class="categories--container">
+  <article class='form--header'>
+    <div></div>
+    <h2>Categories</h2>
+    <%= link_to 'LOG OUT', destroy_user_session_path, data: {turbo_method: :delete} %>
+  </article>
+  <article class="catergories--list--container">
+    <ul class="categories--list">
+      <% @categories.each do |category| %>
+        <li class="categories--item">
+        <div class="categories--item--info">
+          <% if category.icon.attached? %>
+          <%= image_tag category.icon %>
+          <% else %>
+            <%= image_tag "https://media.designrush.com/inspiration_images/134933/conversions/_1511456189_555_McDonald's-preview.jpg" %>
+          <% end %>
+          <%= link_to category.name, category_expenses_path(category) %>
+        </div>
+        <p class="categories--item--price">$<%= format_amount(category.expenses.sum(:amount)) %></p>
+      </li>
+      <% end %>
+    </ul>
+  </article>
+
+  <article class="categories--btn--container">
+    <%= link_to 'Add a new category', new_category_path, class: "add--btn" %>
+  </article>
+</section>
